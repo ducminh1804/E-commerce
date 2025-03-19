@@ -1,0 +1,20 @@
+﻿@model IEnumerable<E_Commerce.ViewModels.LoaiDto>
+   
+<div class="row px-xl-5 pb-3">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <a class="text-decoration-none" asp-controller="HangHoa" asp-action="Index" asp-route-MaLoai="@item.MaLoai">
+                <div class="cat-item d-flex align-items-center mb-4">
+                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                        <img class="img-fluid" src="~/Hinh/HangHoa/@item.Img" alt="">
+                    </div>
+                    <div class="flex-fill pl-3">
+                        <h6>@item.TenLoai</h6>
+                        <small class="text-body">(@item.SoLuong Products)</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>

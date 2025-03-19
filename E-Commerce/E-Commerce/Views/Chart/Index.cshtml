@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutCustomer";
+}
+<div class="container mb-2">
+    <a asp-controller="Admin" asp-action="Index">
+        <button type="button" class="btn btn-primary">Sản phẩm</button>
+    </a>
+    <a asp-controller="Chart" asp-action="Index">
+        <button type="button" class="btn btn-danger">Biểu đồ</button>
+    </a>
+
+</div>
+
+<label for="x">Chọn tháng bắt đầu:</label>
+<select id="x"></select>
+
+<label for="y">Chọn tháng kết thúc:</label>
+<select id="y"></select>
+
+<label for="z">Chọn năm:</label>
+<select id="z">
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+</select>
+
+<button id="btn" type="button" class="btn btn-primary">Lọc</button>
+
+
+<div class="container">
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+</div>

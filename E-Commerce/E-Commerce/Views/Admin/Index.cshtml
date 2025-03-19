@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutCustomer";
+}
+
+
+<div class="container mb-2">
+    <a asp-controller="Admin" asp-action="Index">
+        <button type="button" class="btn btn-primary">Sản phẩm</button>
+    </a>
+    <a asp-controller="Chart" asp-action="Index">
+        <button type="button" class="btn btn-danger">Biểu đồ</button>
+    </a>
+
+</div>
+
+<div class="container">
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Mã hàng</th>
+                <th>Tên</th>
+                <th>Đơn giá</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
