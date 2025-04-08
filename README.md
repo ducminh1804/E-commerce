@@ -12,6 +12,8 @@ Backend API cho hệ thống thương mại điện tử, xây dựng bằng ASP
 | **Entity Framework Core (EF Core)**  | Giao tiếp với database SQL Server cho các bảng sản phẩm, đơn hàng, v.v |
 | Microsoft.ML, MathNet.Numerics | Triển khai thuật toán TF-IDF để chuyển tên sản phẩm thành vector, sau đó dùng Cosine Similarity để tính độ tương đồng và gợi ý các sản phẩm liên quan || **Bogus**                            | Tạo dữ liệu sản phẩm, người dùng, đơn hàng mẫu để phát triển và test  |
 | **Swashbuckle.AspNetCore (Swagger)** | Tạo giao diện và tài liệu cho API giúp dễ dàng kiểm thử                |
+| **VnPay**                             | Tích hợp cổng thanh toán trực tuyến: tạo URL thanh toán, nhận phản hồi và xử lý giao dịch |
+
 
 ---
 
@@ -50,3 +52,85 @@ Chỉnh chuỗi kết nối trong appsettings.json (SQL Server)
 ```bash
 dotnet run
 ```
+
+
+
+# 🛒 E-Commerce Frontend
+
+| Công nghệ             | Mô tả                                                                 |
+|-----------------------|----------------------------------------------------------------------|
+| **Bootstrap 5**       | Framework CSS giúp thiết kế UI responsive                            |
+| **jQuery**            | Thư viện JavaScript hỗ trợ thao tác DOM nhanh chóng                  |
+| **Razor Tag Helpers** | Sử dụng các thẻ như `asp-controller`, `asp-action` để routing động   |
+| **Layout File**       | Dùng `_Layout.cshtml` làm giao diện khung chính                      |
+| **Static Files**      | Các file như `site.css`, `site.js` phục vụ tuỳ biến UI/logic frontend|
+| **Chart.js**          | Thư viện hiển thị biểu đồ (line, bar, pie...) phục vụ thống kê      |
+| **DataTables**        | Plugin jQuery giúp hiển thị bảng dữ liệu động, có phân trang, filter |
+
+
+
+<p align="center">
+  <img src="media/image4.png" alt="Trang chủ" width="800"/>
+  <img src="media/image5.png" alt="Trang chủ" width="800"/>
+
+  <br>
+  <em>Giao diện Đăng kí, Đăng nhập hệ thống</em>
+  <br></br>
+</p>
+
+<p align="center">
+  <img src="media/image6.png" alt="Trang chủ" width="800"/>
+  <br>
+  <em> Giao diện trang chủ </em>
+    <br></br>
+
+</p>
+
+<p align="center">
+  <img src="media/image10.png" alt="Trang chủ" width="800"/>
+  <br>
+  <em>Chi tiết sản phẩm</em>
+    <br></br>
+</p>
+
+<p align="center">
+    <img src="media/image8.png" alt="Trang chủ" width="800"/>
+  <img src="media/image7.png" alt="Trang chủ" width="800"/>
+  <br>
+  <em>Danh sách danh mục và sản phẩm</em>
+    <br></br>
+</p>
+
+<p align="center">
+    <img src="media/image13.png" alt="Trang chủ" width="800"/>
+  <br>
+  <em>Trang đặt hàng</em>
+    <br></br>
+</p>
+
+<p align="center">
+    <img src="media/image14.png" alt="Trang chủ" width="800"/>
+      <img src="media/image16.png" alt="Trang chủ" width="800"/>
+  <br>
+  <em>Giao diện thanh toán VnPay</em>
+    <br></br>
+</p>
+
+<p align="center">
+    <img src="media/image15.png" alt="Trang chủ" width="800"/>
+      <img src="media/image18.png" alt="Trang chủ" width="800"/>
+        <img src="media/image19.png" alt="Trang chủ" width="800"/>
+
+  <br>
+  <em>Giao diện quản lí của Admin</em>
+    <br></br>
+</p>
+
+<p align="center">
+    <img src="media/image23.png" alt="Trang chủ" width="800"/>
+      <img src="media/image24.png" alt="Trang chủ" width="800"/>
+
+  <br>
+  <em>Swagger</em>
+    <br></br>
+</p>
