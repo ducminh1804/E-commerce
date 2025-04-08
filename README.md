@@ -1,6 +1,6 @@
 # 🛒 E-Commerce Backend API
 
-Backend API cho hệ thống thương mại điện tử, xây dựng bằng ASP.NET Core 8.0. Hỗ trợ quản lý sản phẩm, người dùng, đơn hàng, cùng với một số tính năng nâng cao như gợi ý sản phẩm bằng học máy (TF-IDF), sinh dữ liệu giả và cache bằng Redis.
+Backend API cho hệ thống thương mại điện tử, xây dựng bằng ASP.NET Core 8.0. Hỗ trợ quản lý sản phẩm, người dùng, đơn hàng, cùng với một số tính năngnhư gợi ý sản phẩm bằng học máy (TF-IDF), thanh toán VnPay
 
 ---
 
