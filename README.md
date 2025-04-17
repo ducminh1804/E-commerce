@@ -1,71 +1,58 @@
 # 🛒 E-Commerce Backend API
 
-Backend API cho hệ thống thương mại điện tử, xây dựng bằng ASP.NET Core 8.0. Hỗ trợ quản lý sản phẩm, người dùng, đơn hàng, cùng với một số tính năngnhư gợi ý sản phẩm bằng học máy (TF-IDF), thanh toán VnPay
+This is a robust **Backend API** designed for an e-commerce platform, built using **ASP.NET Core 8.0**. The API provides full support for managing products, users, and orders, enabling a seamless e-commerce experience. It includes various advanced features such as:
+
+- **Product Management**: Perform CRUD (Create, Read, Update, Delete) operations on product data, including product names, descriptions, prices, and inventory.
+- **Order Management**: Handle customer orders, track statuses, and integrate with payment gateways.
+- **User Authentication**: Basic user management with registration and login functionality.
+- **Machine Learning Integration**: Product recommendation using **TF-IDF** (Term Frequency-Inverse Document Frequency) and **Cosine Similarity**, which helps suggest similar products to customers.
+- **Payment Gateway**: Integration with **VnPay**, a popular Vietnamese payment service provider, for secure online transactions.
+
+This API is built for high performance and scalability, featuring caching via Redis, full-text search with **Elasticsearch**, and efficient data processing strategies to handle large-scale e-commerce environments.
 
 ---
 
-## 🚀 Công nghệ sử dụng
+## 🚀 Technologies Used
 
-| Công nghệ                             | Mục đích sử dụng cụ thể trong dự án                                    |
-|--------------------------------------|------------------------------------------------------------------------|
-| **ASP.NET Core 8.0**                 | Xây dựng toàn bộ hệ thống backend và API REST                         |
-| **Entity Framework Core (EF Core)**  | Giao tiếp với database SQL Server cho các bảng sản phẩm, đơn hàng, v.v |
-| Microsoft.ML, MathNet.Numerics | Triển khai thuật toán TF-IDF để chuyển tên sản phẩm thành vector, sau đó dùng Cosine Similarity để tính độ tương đồng và gợi ý các sản phẩm liên quan || **Bogus**                            | Tạo dữ liệu sản phẩm, người dùng, đơn hàng mẫu để phát triển và test  |
-| **Swashbuckle.AspNetCore (Swagger)** | Tạo giao diện và tài liệu cho API giúp dễ dàng kiểm thử                |
-| **VnPay**                             | Tích hợp cổng thanh toán trực tuyến: tạo URL thanh toán, nhận phản hồi và xử lý giao dịch |
-
-
----
-
-## 📌 Tính năngchính
-
-- ✅ CRUD sản phẩm, đơn hàng, người dùng
-- ✅ API đăng ký, đăng nhập (cơ bản)
-- ✅ Tích hợp Swagger UI để test API
-- ✅ Gợi ý sản phẩm tương đồng bằng TF-IDF (ML.NET) + Cosine Similarity
-- ✅ Dữ liệu mẫu sinh tự động với thư viện Bogus
+| Technology                           | Specific Purpose in the Project                                                                 |
+|---------------------------------------|------------------------------------------------------------------------------------------------|
+| **ASP.NET Core 8.0**                  | Core framework for building the backend and RESTful API                                           |
+| **Entity Framework Core (EF Core)**   | ORM for interacting with the SQL Server database to manage products, orders, and users          |
+| **Microsoft.ML, MathNet.Numerics**    | Implementing TF-IDF to convert product names into vectors and using Cosine Similarity for product recommendations |
+| **Bogus**                             | Generating sample data for products, users, and orders for development and testing purposes      |
+| **Swashbuckle.AspNetCore (Swagger)**  | API documentation and testing interface for easy interaction with the API                       |
+| **VnPay**                             | Integration with the VnPay payment gateway for generating payment URLs and handling transactions |
 
 ---
 
-## 🧠 Học máy (Gợi ý sản phẩm)
+## 📌 Key Features
 
-Hiện thực lại thuật toán TF-IDF và Cosine Similarity để gợi ý sản phẩm tương tự dựa trên tên.
-
-> Ví dụ: Nhập sản phẩm A → trả về 5 sản phẩm có tên tương tự nhất.
+- ✅ **Product Management**: Create, update, delete, and retrieve products.
+- ✅ **Order Management**: Handle order processing, shipping, and payment status.
+- ✅ **User Authentication**: Basic user registration and login with JWT-based authentication.
+- ✅ **Product Recommendations**: Using **TF-IDF** and **Cosine Similarity**, the API can suggest similar products to users based on the product name.
+- ✅ **Swagger UI**: Fully interactive API documentation that makes testing the API straightforward.
+- ✅ **Sample Data Generation**: Automatically generate product, user, and order data for development and testing purposes using the **Bogus** library.
 
 ---
 
-## 🔧 Cài đặt & chạy dự án
+## 🧠 Machine Learning (Product Recommendations)
 
-### 1️⃣ Clone source
+This feature implements **TF-IDF** (Term Frequency-Inverse Document Frequency) to convert product names into vectors, which are then compared using **Cosine Similarity** to find the most similar products. This method improves the shopping experience by recommending products that are contextually related based on their names.
+
+> Example: Searching for a product called "Red T-shirt" will return the top 5 most similar products, such as other types of t-shirts or similar apparel.
+
+---
+
+## 🔧 Installation & Running the Project
+
+To run this project locally, follow the steps below:
+
+### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/ten-ban/e-commerce-backend.git
+git clone https://github.com/your-username/e-commerce-backend.git
 cd e-commerce-backend
 ```
-
-### 2️⃣ Cấu hình database
-```bash
-Chỉnh chuỗi kết nối trong appsettings.json (SQL Server)
-```
-
-### 3️⃣ Chạy project
-```bash
-dotnet run
-```
-
-
-
-# 🛒 E-Commerce Frontend
-
-| Công nghệ             | Mô tả                                                                 |
-|-----------------------|----------------------------------------------------------------------|
-| **Bootstrap 5**       | Framework CSS giúp thiết kế UI responsive                            |
-| **jQuery**            | Thư viện JavaScript hỗ trợ thao tác DOM nhanh chóng                  |
-| **Razor Tag Helpers** | Sử dụng các thẻ như `asp-controller`, `asp-action` để routing động   |
-| **Layout File**       | Dùng `_Layout.cshtml` làm giao diện khung chính                      |
-| **Static Files**      | Các file như `site.css`, `site.js` phục vụ tuỳ biến UI/logic frontend|
-| **Chart.js**          | Thư viện hiển thị biểu đồ (line, bar, pie...) phục vụ thống kê      |
-| **DataTables**        | Plugin jQuery giúp hiển thị bảng dữ liệu động, có phân trang, filter |
 
 
 
