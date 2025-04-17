@@ -11,6 +11,12 @@ This is a robust **Backend API** designed for an e-commerce platform, built usin
 This API is built for high performance and scalability, featuring caching via Redis, full-text search with **Elasticsearch**, and efficient data processing strategies to handle large-scale e-commerce environments.
 
 ---
+## 📑 Table of Contents
+
+1. [🚀 Technologies Used](#-technologies-used)
+2. [📌 Key Features](#-key-features)
+3. [🧠 Machine Learning (Product Recommendations)](#-machine-learning-product-recommendations)
+4. [🔧 Installation & Running the Project](#-installation--running-the-project)
 
 ## 🚀 Technologies Used
 
